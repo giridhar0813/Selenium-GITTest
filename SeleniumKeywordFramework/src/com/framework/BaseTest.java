@@ -58,11 +58,11 @@ public class BaseTest {
 	boolean isPresent;
 	protected FileOutputStream fileOuput;
 	WebElement el;
-	String imagePath="C:\\Users\\giridhar\\workspace\\SeleniumKeywordFramework\\Report-Output\\SnapShot\\Err.png";	
+	String imagePath="src/Report-Output/SnapShot/Err.png";	
 	
 	public BaseTest(){
 		
-		htmlReporter = new ExtentHtmlReporter("C:\\Users\\giridhar\\workspace\\SeleniumKeywordFramework\\Report-Output\\STMExtentReport.html");
+		htmlReporter = new ExtentHtmlReporter("src/Report-Output/STMExtentReport.html");
 		reports = new ExtentReports();
 		reports.attachReporter(htmlReporter);
 		
@@ -81,7 +81,7 @@ public class BaseTest {
 		
 		
 		if(browser.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\giridhar\\workspace\\SeleniumExtentReports\\DriverServer\\Chrome\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","src/DriverServer/Chrome/chromedriver.exe");
 		 
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("enable-automation");
@@ -92,7 +92,7 @@ public class BaseTest {
 		
 		if(browser.equals("firefox")){
 			
-			System.setProperty("webdriver.gecko.driver","C:\\Users\\giridhar\\workspace\\SeleniumExtentReports\\DriverServer\\Gecko\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver","src/DriverServer/Gecko/geckodriver.exe");
 			
 			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 			FirefoxOptions options = new FirefoxOptions();
